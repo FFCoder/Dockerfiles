@@ -1,0 +1,9 @@
+version: "2"
+services:
+    hass:
+        image: homeassistant/home-assistant:stable
+        network: host
+        volumes:
+            - HASS_CONFIG:/config
+        environment:
+            TZ: America/New_York
