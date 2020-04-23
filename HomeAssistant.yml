@@ -2,7 +2,8 @@ version: "2"
 services:
     hass:
         image: homeassistant/home-assistant:stable
-        networks: host
+        networks: 
+            - host
         restart: always
         volumes:
             - HASS_CONFIG:/config
