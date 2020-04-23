@@ -2,10 +2,10 @@ version: "2"
 services:
     hass:
         image: homeassistant/home-assistant:stable
-        networks: 
-            - host
+        network_mode: host
         restart: always
         volumes:
             - HASS_CONFIG:/config
         environment:
             TZ: America/New_York
+          
