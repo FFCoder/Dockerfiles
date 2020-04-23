@@ -8,4 +8,12 @@ services:
             - HASS_CONFIG:/config
         environment:
             TZ: America/New_York
-          
+    nodered:
+        image: nodered/node-red
+        ports:
+            - 1880:1880
+        volumes:
+            - NODE_RED:/data
+        environment:
+            TZ: America/New_York
+        
