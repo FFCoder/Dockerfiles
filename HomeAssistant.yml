@@ -3,6 +3,7 @@ services:
     hass:
         image: homeassistant/home-assistant:stable
         network: host
+        restart: always
         volumes:
             - HASS_CONFIG:/config
         environment:
